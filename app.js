@@ -1,4 +1,4 @@
-//Selectors
+//Seletores
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
@@ -7,32 +7,32 @@ const todoList = document.querySelector('.todo-list');
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
 
-//Functions
+//Funções
 
 function addTodo(event) {
     //prevent form from submitting
     event.preventDefault();
-    //todo Div
+    //"todo" Div
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");
-    //Create Li
+    //Criando Li
     const newTodo = document.createElement('li');
     newTodo.innerText = todoInput.value;
     newTodo.classList.add('todo-item');
     todoDiv.appendChild(newTodo);
-    //CHECK MARK BUTTON
+    //Botão CHECK MARK
     const completedButton = document.createElement('button');
     completedButton.innerHTML = '<i class="fas fa-check"></i>';
     completedButton.classList.add('complete-btn');
     todoDiv.appendChild(completedButton);
-    //TRASH BUTTON
+    //Botão TRASH
     const trashButton = document.createElement('button');
     trashButton.innerHTML = '<i class="fas fa-trash"></i>';
     trashButton.classList.add('trash-btn');
     todoDiv.appendChild(trashButton);
-    //APPEND TO LIST
+    //Associando TO LIST
     todoList.appendChild(todoDiv);
-    //CLEAR TODO INPUT VALUE
+    //Limpando "TODO" valor do Input
     todoInput.value = "";
 }
 
@@ -41,7 +41,7 @@ function deleteCheck(e) {
     //DELETE TODO
     if (item.classList[0] === 'trash-btn') {
         const todo = item.parentElement;
-        //Animation
+        //Animação
         todo.classList.add("fall");
         todo.addEventListener('transitionend', function() {
             todo.remove();
