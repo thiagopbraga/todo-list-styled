@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(120deg, #e2c35d, #fda085);
+    background: rgb(53, 2, 53);
     color: white;
     font-family: 'poppins', sans-serif;
     min-height: 100vh;
@@ -32,14 +32,14 @@ form button {
 }
 
 form button {
-    color: #d88771;
+    color: rgb(53, 2, 53);
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 form button:hover {
-    background: #d88771;
+    background: rgb(53, 2, 53);
     color: white;
 }
 
@@ -71,7 +71,7 @@ form button:hover {
 
 .trash-btn,
 .complete-btn {
-    background: #ff6f47;
+    background: rgb(153, 10, 153);
     color: white;
     border: none;
     padding: 1rem;
@@ -80,7 +80,7 @@ form button:hover {
 }
 
 .complete-btn {
-    background: rgb(73, 204, 73);
+    background: rgb(8, 105, 8);
 }
 
 .todo-item {
@@ -117,7 +117,7 @@ select {
 }
 
 select {
-    color: #ff6f47;
+    color: rgb(153, 10, 153);
     width: 9rem;
     padding: 0.9rem;
     cursor: pointer;
@@ -126,7 +126,7 @@ select {
 .select::after {
     content: "\25BC";
     position: absolute;
-    background: #ff6f47;
+    background: rgb(153, 10, 153);
     top: 0;
     right: 0;
     padding: 1rem;
@@ -136,5 +136,12 @@ select {
 
 .select:hover::after {
     background: white;
-    color: #ff6f47;
+    color: rgb(153, 10, 153);
+}
+
+@media (max-width: 700px) {
+    form {
+        display: flex;
+        flex-direction: column;
+    }
 }
